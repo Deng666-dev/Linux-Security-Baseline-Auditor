@@ -27,3 +27,6 @@ fi
 
 # 预留扩展位置：后续将在这里动态加载 rules/ 目录下的检查脚本
 echo -e "${YELLOW}[*] 环境初始化完成，等待加载检查模块...${NC}"
+
+bash rules/check_shadow.sh
+bash rules/check_ssh.sh

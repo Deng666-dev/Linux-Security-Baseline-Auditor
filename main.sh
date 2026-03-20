@@ -42,8 +42,10 @@ echo "- **访问控制 (UFW)**: ✅ 防火墙状态 active。" >> $TMP_FILE
 
 bash rules/check_ssh.sh
 bash rules/check_ufw.sh
+bash rules/check_perms.sh
+bash rules/check_shadow.sh
 bash rules/check_audit.sh
-bash rules/check_audit.sh
+bash rules/check_pwd_policy.sh
 
 # 3. 将各个模块收集到的 Markdown 片段合并到最终报告中
 cat $TMP_FILE >> $REPORT_FILE
